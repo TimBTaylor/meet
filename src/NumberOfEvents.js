@@ -1,4 +1,4 @@
-import { times } from 'lodash';
+
 import React, { Component } from 'react';
 
 class NumberOfEvents extends Component {
