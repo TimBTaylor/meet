@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1622676541905" clover="3.2.0">
+  <project timestamp="1622676541905" name="All files">
+    <metrics statements="40" coveredstatements="40" conditionals="6" coveredconditionals="6" methods="22" coveredmethods="22" elements="68" coveredelements="68" complexity="0" loc="40" ncloc="40" packages="1" files="6" classes="6"/>
+    <file name="App.js" path="/Users/timtaylor/Documents/meet/src/App.js">
+      <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+      <line num="11" count="5" type="stmt"/>
+      <line num="17" count="5" type="stmt"/>
+      <line num="18" count="5" type="stmt"/>
+      <line num="19" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="3" type="stmt"/>
+      <line num="26" count="4" type="stmt"/>
+      <line num="29" count="5" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="31" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="40" count="10" type="stmt"/>
+    </file>
+    <file name="CitySearch.js" path="/Users/timtaylor/Documents/meet/src/CitySearch.js">
+      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
+      <line num="4" count="5" type="stmt"/>
+      <line num="9" count="5" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="20" count="5" type="stmt"/>
+      <line num="21" count="4" type="stmt"/>
+      <line num="22" count="4" type="stmt"/>
+      <line num="30" count="22" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="35" count="17" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+    </file>
+    <file name="EventList.js" path="/Users/timtaylor/Documents/meet/src/EventList.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="7" count="8" type="stmt"/>
+      <line num="8" count="8" type="stmt"/>
+      <line num="11" count="7" type="stmt"/>
+    </file>
+    <file name="NumberOfEvents.js" path="/Users/timtaylor/Documents/meet/src/NumberOfEvents.js">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="9" count="5" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="16" count="11" type="stmt"/>
+    </file>
+    <file name="api.js" path="/Users/timtaylor/Documents/meet/src/api.js">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="12" type="stmt"/>
+      <line num="5" count="6" type="stmt"/>
+      <line num="6" count="6" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="9" type="stmt"/>
+    </file>
+    <file name="mock-data.js" path="/Users/timtaylor/Documents/meet/src/mock-data.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="82" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
