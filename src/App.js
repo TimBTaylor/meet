@@ -6,19 +6,30 @@ import NumberOfEvents from './NumberOfEvents';
 import { extractLocations, getEvents } from './api';
 import './App.css';
 import './nprogress.css';
+import icon from './images/github-logo.svg';
+import linkedin from './images/linkedin_icon.svg';
 
 class App extends Component {
 
   state = {
     events: [],
-    locations: []
+    locations: [],
+    numberOfEvents: 32,
+    eventsByLocation: null,
+    currentLocation: 'all'
   }
 
   componentDidMount() {
     this.mounted = true;
-    getEvents().then((events) => {
+    const { numberOfEvents } = this.state;
+
+    getEvents().then(events => {
       if (this.mounted) {
-        this.setState({ events, locations: extractLocations(events) });
+        this.setState({
+          events: events.slice(0, numberOfEvents),
+          locations: extractLocations(events),
+          eventsByLocation: events.length
+        });
       }
     });
   }
@@ -27,21 +38,41 @@ class App extends Component {
     this.mounted = false;
   }
 
-  updateEvents = (location) => {
-    getEvents().then((events) => {
-      const locationEvents = (location === 'all') ? events : events.filter((event) => event.location === location);
+  updateEvents = location => {
+    getEvents().then(events => {
+      const locationEvents = (location === 'all')
+        ? events
+        : events.filter(event => event.location === location);
+      const { numberOfEvents } = this.state;
+      const filteredEvents = locationEvents.slice(0, numberOfEvents);
+      const eventsByLocation = locationEvents.length;
       this.setState({
-        events: locationEvents
+        events: filteredEvents,
+        eventsByLocation: eventsByLocation,
+        currentLocation: location
       });
     });
+  }
 
+  updateEventCount = eventCount => {
+    const { currentLocation } = this.state;
+    this.setState({
+      numberOfEvents: eventCount
+    });
+    this.updateEvents(currentLocation);
   }
 
   render() {
     return (
       <div className="App">
+        <div className="icons">
+          <a target="_blank" rel="noreferrer" className="github-logo" href="https://github.com/TimBTaylor/meet"><img className="github-logo" src={icon} alt="github logo" ></img></a>
+          <a target="_blank" rel="noreferrer" className="linkedin-logo" href="https://www.linkedin.com/in/tim-taylor-aaa970207/"><img className="linkedin-logo" src={linkedin} alt="linkedin logo"></img></a>
+        </div>
+        <h1 className="intro">Meet App</h1>
+        <h4 className="enter-city">Enter a city:</h4>
         <CitySearch updateEvents={this.updateEvents} locations={this.state.locations} />
-        <NumberOfEvents />
+        <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEventCount={this.updateEventCount} />
         <EventList events={this.state.events} />
       </div>
     );

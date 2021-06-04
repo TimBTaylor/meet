@@ -36,8 +36,37 @@ input[type="number"] {
   height: 38px;
 }
 
+.show-hide {
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-weight:bold;
+  font-size:15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.show-hide:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.show-hide:active {
+	position:relative;
+	top:1px;
+}
+
+.event-summary {
+  color: #79bbff;
+}
+
 .city {
   width: 250px;
+  border:1px solid #1D38FC;
 }
 
 .CitySearch {
@@ -198,6 +227,36 @@ input[type="number"] {
   font-family: "Roboto";
 }
 
+.intro {
+  display: block;
+  text-decoration: underline;
+  color: #1564ad;
+  text-align: center;
+}
+
+.event-container {
+  display: inline-block;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.icons {
+  display:inline-block;
+}
+
+.github-logo {
+  margin-right: 5px;
+}
+
+.event-date, .event-timezone, .event-location {
+  padding: 5px;
+}
+
+.event-description {
+  margin: 15px;
+}
 
 
 @media only screen and (min-width: 992px) {

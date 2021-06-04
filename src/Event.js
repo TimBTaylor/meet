@@ -20,14 +20,21 @@ class Event extends Component {
 
     render() {
         const { event } = this.props;
+        const eventISODateTime = new Date(event.start.dateTime);
+        const date = eventISODateTime.toDateString();
         return <div className="event-container">
             <h1 className="event-summary">{event.summary}</h1>
-            <p className="event-date">{event.dateTime}</p>
-            <p className="event-timezone">{event.timeZone}</p>
+            <p className="event-date">{date} </p>
             <p className="event-location">{event.location}</p>
-            {this.state.showingDetails ? (<div />) : (<button className="show-hide" onClick={this.eventDetails}>See Details</button>)}
-            {this.state.showingDetails ? (<div className="about-event" />) : (<div />)}
-        </div>
+            {this.state.showingDetails && (
+                <div className="event-details">
+                    <h3 className="about-event">About event:</h3>
+                    <a className="details-link" target="_blank" rel="noreferrer" href={event.htmlLink}>See details on Google Calendar</a>
+                    <p className="event-description">{event.description}</p>
+                </div>
+            )}
+            <button className="show-hide" onClick={() => this.eventDetails()}> {this.state.showingDetails ? 'hide description' : 'show description'} </button>
+        </div >
     }
 }
 
