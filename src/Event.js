@@ -21,10 +21,13 @@ class Event extends Component {
     render() {
         const { event } = this.props;
         const eventISODateTime = new Date(event.start.dateTime);
-        const date = eventISODateTime.toDateString();
+        const eventDate = eventISODateTime.toDateString();
+        const eventTime = eventISODateTime.toTimeString();
+        const eventTimeFormatted = `${eventTime.slice(0, 5)} ${eventTime.slice(18)}`;
         return <div className="event-container">
             <h1 className="event-summary">{event.summary}</h1>
-            <p className="event-date">{date} </p>
+            <p className="event-date">{eventDate} </p>
+            <p className="event-time">{eventTimeFormatted}</p>
             <p className="event-location">{event.location}</p>
             {this.state.showingDetails && (
                 <div className="event-details">
