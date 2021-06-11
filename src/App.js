@@ -24,9 +24,12 @@ class App extends Component {
     this.mounted = true;
     const { numberOfEvents } = this.state;
     if(!navigator.onLine) {
-      this.setState({offlineWarning: 'No network connection. Events might be outdated'});    }
+      this.setState({offlineWarning: 'No network connection. Events might be outdated'});
+      console.log('state is false')
+    }
     else {
       this.setState({offlineWarning: ''});
+      console.log('state is true')
     }
 
     getEvents().then(events => {
