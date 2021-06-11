@@ -32,11 +32,11 @@ class App extends Component {
           eventsByLocation: events.length
         });
       }
-      if(!navigator.onLine) {
-        this.setState({offlineWarning: 'No network connection. Events might be outdated'})
+      if(navigator.onLine) {
+        this.setState({offlineWarning: ''})
       }
       else {
-        this.setState({offlineWarning: ''});
+        this.setState({offlineWarning: 'No network connection. Events might be outdated'});
       }
     });
   }
