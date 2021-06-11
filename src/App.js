@@ -70,7 +70,6 @@ class App extends Component {
           <a target="_blank" rel="noreferrer" className="linkedin-logo" href="https://www.linkedin.com/in/tim-taylor-aaa970207/"><img className="linkedin-logo" src={linkedin} alt="linkedin logo"></img></a>
         </div>
         <h1 className="intro">Meet App</h1>
-        <h4 className="enter-city">Enter a city:</h4>
         <CitySearch updateEvents={this.updateEvents} locations={this.state.locations} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEventCount={this.updateEventCount} />
         <EventList events={this.state.events} />
