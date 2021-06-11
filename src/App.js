@@ -8,6 +8,7 @@ import './App.css';
 import './nprogress.css';
 import icon from './images/github-logo.svg';
 import linkedin from './images/linkedin_icon.svg';
+import { OfflineAlert } from './Alert';
 
 class App extends Component {
 
@@ -22,6 +23,9 @@ class App extends Component {
   componentDidMount() {
     this.mounted = true;
     const { numberOfEvents } = this.state;
+    if(!navigator.onLine) {
+      this.setState({offlineWarning: 'No network connection. Events might be outdated'})
+    }
 
     getEvents().then(events => {
       if (this.mounted) {
@@ -69,6 +73,7 @@ class App extends Component {
           <a target="_blank" rel="noreferrer" className="github-logo" href="https://github.com/TimBTaylor/meet"><img className="github-logo" src={icon} alt="github logo" ></img></a>
           <a target="_blank" rel="noreferrer" className="linkedin-logo" href="https://www.linkedin.com/in/tim-taylor-aaa970207/"><img className="linkedin-logo" src={linkedin} alt="linkedin logo"></img></a>
         </div>
+        <OfflineAlert text={this.state.offlineWarning} />
         <h1 className="intro">Meet App</h1>
         <CitySearch updateEvents={this.updateEvents} locations={this.state.locations} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEventCount={this.updateEventCount} />
