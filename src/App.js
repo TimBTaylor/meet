@@ -23,6 +23,11 @@ class App extends Component {
   componentDidMount() {
     this.mounted = true;
     const { numberOfEvents } = this.state;
+    if(!navigator.onLine) {
+      this.setState({offlineWarning: 'No network connection. Events might be outdated'});    }
+    else {
+      this.setState({offlineWarning: ''});
+    }
 
     getEvents().then(events => {
       if (this.mounted) {
@@ -31,12 +36,6 @@ class App extends Component {
           locations: extractLocations(events),
           eventsByLocation: events.length
         });
-      }
-      if(navigator.onLine) {
-        this.setState({offlineWarning: ''})
-      }
-      else {
-        this.setState({offlineWarning: 'No network connection. Events might be outdated'});
       }
     });
   }
