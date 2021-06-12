@@ -30,7 +30,6 @@ export default function EventGenre(props) {
           labelLine={false}
           label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
           outerRadius={80}
-          innerRadius={20}
           fill="#bbe1fa"
           stroke="#1b262c"
           dataKey="value"
