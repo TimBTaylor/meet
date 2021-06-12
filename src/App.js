@@ -43,11 +43,9 @@ class App extends Component {
     }
     if(!navigator.onLine) {
       this.setState({offlineWarning: 'No network connection. Events might be outdated'});
-      console.log('state is false')
     }
     else {
       this.setState({offlineWarning: ''});
-      console.log('state is true')
     }
   }
 
