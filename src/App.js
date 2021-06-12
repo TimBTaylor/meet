@@ -98,7 +98,7 @@ class App extends Component {
           <a target="_blank" rel="noreferrer" className="linkedin-logo" href="https://www.linkedin.com/in/tim-taylor-aaa970207/"><img className="linkedin-logo" src={linkedin} alt="linkedin logo"></img></a>
         </div>
         <OfflineAlert text={this.state.offlineWarning} />
-        <h1 className="intro">Meet App</h1>
+        <h1 className="intro">Developer Events</h1>
         <CitySearch updateEvents={this.updateEvents} locations={this.state.locations} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEventCount={this.updateEventCount} />
         <div className="data-vis-wrapper" >
