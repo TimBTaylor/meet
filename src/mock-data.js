@@ -19,7 +19,7 @@ const mockData = [
             "self": true
         },
         "start": {
-            "dateTime": "2020-05-19T16:00:00+02:00",
+            "dateTime": "2021-06-19T16:00:00+02:00",
             "timeZone": "Europe/Berlin"
         },
         "end": {
@@ -58,7 +58,7 @@ const mockData = [
             "self": true
         },
         "start": {
-            "dateTime": "2020-05-20T14:00:00+02:00",
+            "dateTime": "2021-06-20T14:00:00+02:00",
             "timeZone": "Europe/Berlin"
         },
         "end": {
@@ -87,7 +87,7 @@ const mockData = [
         "updated": "2020-05-27T12:01:32.356Z",
         "summary": "Learn JavaScript",
         "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-        "location": "London, UK",
+        "location": "Detroit, USA",
         "creator": {
             "email": "fullstackwebdev@careerfoundry.com",
             "self": true
@@ -97,7 +97,7 @@ const mockData = [
             "self": true
         },
         "start": {
-            "dateTime": "2020-05-21T16:00:00+02:00",
+            "dateTime": "2021-06-21T16:00:00+02:00",
             "timeZone": "Europe/Berlin"
         },
         "end": {
@@ -126,7 +126,7 @@ const mockData = [
         "updated": "2020-05-27T12:01:32.356Z",
         "summary": "Learn JavaScript",
         "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-        "location": "London, UK",
+        "location": "New York, USA",
         "creator": {
             "email": "fullstackwebdev@careerfoundry.com",
             "self": true
@@ -136,7 +136,7 @@ const mockData = [
             "self": true
         },
         "start": {
-            "dateTime": "2020-05-19T16:00:00+02:00",
+            "dateTime": "2021-06-19T16:00:00+02:00",
             "timeZone": "Europe/Berlin"
         },
         "end": {
